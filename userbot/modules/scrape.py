@@ -36,7 +36,7 @@ if not client.is_user_authorized():
         
 os.system("clear")
 
-print('    \033[1;34mTest Drive \033[1;33m=> \033[1;36mKanxck \033[0m\n\n')
+print('    \033[1;34mTest Drive \033[1;33m=> \033[1;36mZack_Opp47 \033[0m\n\n')
 
 chats = []
 last_date = None
@@ -58,21 +58,21 @@ for chat in chats:
             groups.append(chat)
     except:
         continue
-print('\033[1;36mmileh grupe scrape members:\033[1;35m')
+print('\033[1;36mpilih grup scrape members:\033[1;35m')
 i=0
 for g in groups:
     print(str(i) + '- ' + g.title)
     i+=1
 
-g_index = input(" \033[1;33mPileh nomer scrape user : \033[1;36m")
+g_index = input(" \033[1;33mmemilih nomor grup scrape members : \033[1;36m")
 target_group=groups[int(g_index)]
 
 print('\033[1;31mFetching Members...')
 all_participants = []
 all_participants = client.get_participants(target_group, aggressive=True)
 
-print('\033[1;37mSaving File In to kanxck.csv')
-with open("kanxck.csv","w",encoding='UTF-8') as f:
+print('\033[1;37mSaving File In to zack.csv')
+with open("zack.csv","w",encoding='UTF-8') as f:
     writer = csv.writer(f,delimiter=",",lineterminator="\n")
     writer.writerow(['username','user id', 'access hash','name','group', 'group id'])
     for user in all_participants:
